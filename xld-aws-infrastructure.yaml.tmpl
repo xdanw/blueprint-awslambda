@@ -1,0 +1,10 @@
+---
+apiVersion: xl-deploy/v1
+kind: Infrastructure
+spec:
+- directory: Infrastructure/{{.AwsInfraDir}}
+  children:
+  - name: {{.AwsInfraName}}
+    type: aws.Cloud
+    accessKey: {{.AwsAccessKeyID}}
+    accessSecret: {{.AwsAccessSecret}}
